@@ -23,6 +23,8 @@ This fork has additional changes to support the following mongoid/ruby versions:
 | mongoid >= 7.0 < 7.3.5   | [mongoid7](https://github.com/fullhealthmedical/mongoid-versioning/tree/mongoid73)  | No                       | 2.7                    | ![Build](https://github.com/fullhealthmedical/mongoid-versioning/actions/workflows/build.yml/badge.svg?branch=mongoid73) |
 | mongoid >= 7.3.5 < 7.4.3 | [mongoid74](https://github.com/fullhealthmedical/mongoid-versioning/tree/mongoid74) | No                       | 3.0, 3.1               | ![Build](https://github.com/fullhealthmedical/mongoid-versioning/actions/workflows/build.yml/badge.svg?branch=mongoid74) |
 | mongoid >= 7.4.3 < 7.5.1 | [mongoid75](https://github.com/fullhealthmedical/mongoid-versioning/tree/mongoid75) | No                       | 3.0, 3.1               | ![Build](https://github.com/fullhealthmedical/mongoid-versioning/actions/workflows/build.yml/badge.svg?branch=mongoid75) |
+| mongoid >= 7.5.1 < 8.1.0 | [mongoid81](https://github.com/fullhealthmedical/mongoid-versioning/tree/mongoid81) | No                       | 3.0, 3.1               | ![Build](https://github.com/fullhealthmedical/mongoid-versioning/actions/workflows/build.yml/badge.svg?branch=mongoid81) |
+
 In your Gemfile:
 
 ```ruby
