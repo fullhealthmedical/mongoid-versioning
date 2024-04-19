@@ -22,6 +22,7 @@ module Mongoid
             doc.parentize(_base)
             binding do
               unless metadata.versioned?
+                remove_associated(doc)
                 doc.do_or_do_not(_association.inverse_setter(_target), base)
               end
             end

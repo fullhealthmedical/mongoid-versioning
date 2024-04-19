@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 gemspec
 
-gem 'mongoid', "~> 7.5.4"
+gem 'mongoid', "~> 8.0.8"
