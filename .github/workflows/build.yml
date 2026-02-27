@@ -5,12 +5,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ['3.0', '3.1']
-        mongoid: ['74']
+        ruby: ['3.4']
         mongodb: ['4.4', '5.0']
 
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }} / Mongo ${{ matrix.mongodb }} / Mongoid ${{ matrix.mongoid }}
+    name: Ruby ${{ matrix.ruby }} / Mongo ${{ matrix.mongodb }}
 
     steps:
     - uses: actions/checkout@v3
@@ -25,6 +24,5 @@ jobs:
 
     - name: Install gems
       run: |
-        export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/Mongoid_${{ matrix.mongoid }}.gemfile"
         bundle install --jobs 4 --retry 3
     - run: bundle exec rspec

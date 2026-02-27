@@ -199,7 +199,6 @@ describe Mongoid::Versioning do
 
       context 'when the document is persisted more than once' do
         before do
-          skip "Mongoid 7 bug: https://jira.mongodb.org/browse/MONGOID-5379"
           3.times do |n|
             page.with(database: database_id_alt) do |page_alt|
               page_alt.update_attribute(:description, n.to_s)
@@ -218,7 +217,7 @@ describe Mongoid::Versioning do
         end
 
         it 'persists the versions to specified database' do
-          expect(WikiPage.with(database: database_id_alt).find_by(title: title).version).to eq(4)
+          expect(WikiPage.with(database: database_id_alt) { |w| w.find_by(title: title).version }).to eq(4)
         end
       end
 
