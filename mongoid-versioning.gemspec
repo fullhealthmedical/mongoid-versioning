@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split("\n")
   gem.require_path  = 'lib'
 
-  gem.add_dependency 'activesupport', '~> 8.1.1'
+  gem.add_dependency 'activesupport', '~> 8.0'
   gem.add_dependency 'mongoid', '~> 9.0.4'
   gem.add_development_dependency 'rake', '~> 10.0'
   gem.add_development_dependency 'rspec', '~> 3'
